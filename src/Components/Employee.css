@@ -1,0 +1,23 @@
+.EmployeePanel
+{
+   
+    position:relative; 
+    display:table-column-group; 
+    align-self:baseline;
+    color:white;
+    background-color: grey;
+}
+.EmployeePanel tr
+{
+
+}
+.EmployeePanel tbody tr:hover
+{ 
+    transition: background-color ease-in 0.63s;
+    background-color: rgb(164, 34, 34); 
+}
+.EmployeePanel tbody tr td:hover
+{
+    background-color: rgb(177, 172, 168); 
+     
+}
