@@ -54,7 +54,7 @@ position:'relative'}}>
         
         </tr>
       </thead>
-      <tbody>
+      {userData.length? (<tbody> 
       {userData.map((user) => (
         <tr style={{fontFamily:'monospace',fontWeight:'lighter',fontSize:'25px'}}>
                 <td style={{border:'3px dashed #000',padding:'0px 20px',}}>{user.id}</td>
@@ -68,7 +68,9 @@ position:'relative'}}>
                 <td style={{backgroundColor: user.permissions.whiteListed? 'green' : '',border:'3px solid #000',textAlign:'center',padding:'0px 20px',}}>{user.permissions.whiteListed ? "Yes":"No"}</td>
                 </tr>
             ))}
-      </tbody>
+      </tbody> ) : (
+      <div style={{textAlign:'center'}}> 
+        <label style={{fontSize:'20px',textShadow:'2px 3px 4px red',color:'white'}}>Error : Not connected to Database</label></div>)}
     </table> 
 </>        
     ); // or any JSX you want to render while waiting for the data
